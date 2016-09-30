@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>EODF</title>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h1>EODF CONFERENCE</h1>
+
+    <div class="container-fluid">
+      <div class="borderrow">
+        <div class="border col-lg-3">
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/EODF16" data-widget-id="781513964912054272">Tweets sobre #EODF16</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+        <div class="border col-lg-3">
+          <table class="centered striped responsive-table">
+            <thead>
+              <tr>
+                  <th data-field="game">Game</th>
+                  <th data-field="number">Number</th>
+              </tr>
+            </thead>
+            <tbody id="tableValues">
+            </tbody>
+          </table>  
+        </div>
+        <div class="border col-lg-3">
+          <div id="barchart_div" style="border: 1px solid #ccc">
+        </div>
+        <div class="border col-lg-3">
+          <div id="piechart_div" style="border: 1px solid #ccc">
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="appEODF.js"></script>
+  </body>
+</html>
