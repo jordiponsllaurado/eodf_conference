@@ -3,23 +3,19 @@
 
   <head>
     <title>EODF</title>
-
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+       body { background: navy !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    </style>
   </head>
 
   <body>
     <h1>EODF CONFERENCE</h1>
 
-    <div class="container-fluid">
-      <div class="borderrow">
+    <!--div class="container-fluid">
+      <div class="border row">
         <div class="border col-lg-3">
           <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/EODF16" data-widget-id="781513964912054272">Tweets sobre #EODF16</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -43,8 +39,49 @@
           <div id="piechart_div" style="border: 1px solid #ccc">
         </div>
       </div>
-    </div>
+    </div-->
+<div id="piechart_div" style="border: 1px solid #000"></div>
+    <div class="container-fluid">
+        <div class="border row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                  <div class="item active">
+                    <div class="carousel-caption">
+                      <div>
+                      <h1>rerwwerrewwerwerwerwer</h1>
+                        <div id="barchart_div" style="border: 1px solid #000"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="carousel-caption">
+                      <h1>blblablalbalbblblshlsjh</h1>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+      </div>
 
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-auth.js"></script>
