@@ -18,43 +18,40 @@ firebase.auth().signInWithEmailAndPassword("test@gmail.com", "adminadmin").catch
   // ...
 });
 
+
 function drawChartA() {
+  var results = firebase.database().ref('results/');
+  results.on('value', function(snapshot) {
+    var data = snapshot.val();
+    var list = [];
+    for (var key in data) {
+      if (data.hasOwnProperty(key)) {
+          game_3 = data[key].game_3 ? data[key].game_3 : '';
+          name = data[key].name ? data[key].name : '';
+          list.push({
+                  name: name,
+                  game: game_3,
+              })
+      }
+    }
+
     var data = new google.visualization.DataTable();
-      data.addColumn('timeofday', 'Time of Day');
-      data.addColumn('number', 'Played');
-      data.addColumn('number', 'Total Gamers');
+    data.addColumn('string', 'Game')
+    data.addColumn('number', 'Game points');
+    //data.addColumn('number', 'Total');
 
-      data.addRows([  
-        [{v: [15, 0, 0], f: '3 pm'}, 8, 5.25],
-        [{v: [16, 0, 0], f: '4 pm'}, 9, 7.5],
-        [{v: [17, 0, 0], f: '5 pm'}, 10, 10],
-      ]);
-
-      var options = {
-        chart: {
-          title: 'Motivation and Energy Level Throughout the Day',
-          subtitle: 'Based on a scale of 1 to 10'
-        },
-        axes: {
-          x: {
-            0: {side: 'top'}
-          }
-        },
-        hAxis: {
-          title: 'Time of Day',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [7, 30, 0],
-            max: [17, 30, 0]
-          }
-        },
-        vAxis: {
-          title: 'Rating (scale of 1-10)'
-        }
-      };
-
-      var material = new google.charts.Bar(document.getElementById('ChartA'));
-      material.draw(data, options);
+    var lis = [];
+    for (var i = 0; i < list.length; i++) {
+      //var value = ["Game 3", parseInt(list[i]), 85];
+      var value = [list[i].name, parseInt(list[i].game)];
+      lis.push(value);
+    };
+    data.addRows(lis);
+    var options = {'title':'Game 3 Results'};
+    //var material = new google.charts.Bar(document.getElementById('ChartA'));
+    var material =  new google.visualization.ColumnChart(document.getElementById('ChartA'));
+    material.draw(data, options);
+  });
 }
 google.load('visualization', '1', {packages:['corechart'], callback: drawChartA});
 
