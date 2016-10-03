@@ -1,5 +1,3 @@
-$('#myCarousel').carousel();
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyDzVFtqSeQBld5UoPtTARd4htrf3WqZVj4",
