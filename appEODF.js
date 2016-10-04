@@ -18,92 +18,66 @@ firebase.auth().signInWithEmailAndPassword("test@gmail.com", "adminadmin").catch
   // ...
 });
 
+
 function drawChartA() {
+  var results = firebase.database().ref('results/');
+  results.on('value', function(snapshot) {
+    var data = snapshot.val();
+    var list = [];
+    for (var key in data) {
+      if (data.hasOwnProperty(key)) {
+          game_3 = data[key].game_3 ? data[key].game_3 : '';
+          name = data[key].name ? data[key].name : '';
+          list.push({
+                  name: name,
+                  game: game_3,
+              })
+      }
+    }
+
     var data = new google.visualization.DataTable();
-      data.addColumn('timeofday', 'Time of Day');
-      data.addColumn('number', 'Played');
-      data.addColumn('number', 'Total Gamers');
+    data.addColumn('string', 'Game')
+    data.addColumn('number', 'Game points');
 
-      data.addRows([  
-        [{v: [15, 0, 0], f: '3 pm'}, 8, 5.25],
-        [{v: [16, 0, 0], f: '4 pm'}, 9, 7.5],
-        [{v: [17, 0, 0], f: '5 pm'}, 10, 10],
-      ]);
-
-      var options = {
-        chart: {
-          title: 'Motivation and Energy Level Throughout the Day',
-          subtitle: 'Based on a scale of 1 to 10'
-        },
-        axes: {
-          x: {
-            0: {side: 'top'}
-          }
-        },
-        hAxis: {
-          title: 'Time of Day',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [7, 30, 0],
-            max: [17, 30, 0]
-          }
-        },
-        vAxis: {
-          title: 'Rating (scale of 1-10)'
-        }
-      };
-
-      var material = new google.charts.Bar(document.getElementById('ChartA'));
-      material.draw(data, options);
+    var lis = [];
+    for (var i = 0; i < list.length; i++) {
+      var value = [list[i].name, parseInt(list[i].game)];
+      lis.push(value);
+    };
+    data.addRows(lis);
+    var options = {'title':'Game 3 Results'};
+    var material =  new google.visualization.ColumnChart(document.getElementById('ChartA'));
+    material.draw(data, options);
+  });
 }
 google.load('visualization', '1', {packages:['corechart'], callback: drawChartA});
 
-function drawChartB() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
-  data.addRows([
-    ['Mushrooms', 3],
-    ['Onions', 1],
-    ['Olives', 1],
-    ['Zucchini', 1],
-    ['Pepperoni', 2]
+
+function drawChartC() {
+  var data = google.visualization.arrayToDataTable([
+    ['Country', 'Popularity'],
+    ['Germany', 200],
+    ['United States', 300],
+    ['Brazil', 400],
+    ['Canada', 500],
+    ['France', 600],
+    ['RU', 700]
   ]);
 
-  var barchart_options = {title:'Barchart: How Much Pizza I Ate Last Night',width:400,height:300,legend: 'none'};
-  var barchart = new google.visualization.BarChart(document.getElementById('ChartB'));
-  barchart.draw(data, barchart_options);
+  var options = {};
+
+  var chart = new google.visualization.GeoChart(document.getElementById('ChartC'));
+
+  chart.draw(data, options);
 }
-google.load('visualization', '1', {packages:['corechart', 'bar'], callback: drawChartB});
-
-
-$("a[href='#1']").on('shown.bs.tab', function (e) {
-    google.load('visualization', '1', {
-        packages: ['timeline'],
-        callback: drawChart
-    });
-});
-
-$("a[href='#2']").on('shown.bs.tab', function (e) {
-    google.load('visualization', '1', {
-        packages: ['timeline'],
-        callback: drawChartA
-    });
-});
-
-$("a[href='#3']").on('shown.bs.tab', function (e) {
-    google.load('visualization', '1', {
-        packages: ['timeline'],
-        callback: drawChartC
-    });
-});
+google.load('visualization', '1', {packages:['geochart'], callback: drawChartC});
 
 // Tab Pane continue moving
-    var tabCarousel = setInterval(function() {
-      var tabs = $('.nav-tabs > li'),
-          active = tabs.filter('.active'),
-          next = active.next('li'),
-          toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
+var tabCarousel = setInterval(function() {
+  var tabs = $('.nav-tabs > li'),
+      active = tabs.filter('.active'),
+      next = active.next('li'),
+      toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
 
-      toClick.trigger('click');
-  }, 5000);
+  toClick.trigger('click');
+}, 5000);
