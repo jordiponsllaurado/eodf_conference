@@ -55,52 +55,33 @@ function drawChartA() {
 }
 google.load('visualization', '1', {packages:['corechart'], callback: drawChartA});
 
-function drawChartB() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
-  data.addRows([
-    ['Mushrooms', 3],
-    ['Onions', 1],
-    ['Olives', 1],
-    ['Zucchini', 1],
-    ['Pepperoni', 2]
+
+function drawChartC() {
+  var data = google.visualization.arrayToDataTable([
+    ['Country', 'Popularity'],
+    ['Germany', 200],
+    ['United States', 300],
+    ['Brazil', 400],
+    ['Canada', 500],
+    ['France', 600],
+    ['RU', 700]
   ]);
 
-  var barchart_options = {title:'Barchart: How Much Pizza I Ate Last Night',width:400,height:300,legend: 'none'};
-  var barchart = new google.visualization.BarChart(document.getElementById('ChartB'));
-  barchart.draw(data, barchart_options);
+  var options = {};
+
+  var chart = new google.visualization.GeoChart(document.getElementById('ChartC'));
+
+  chart.draw(data, options);
 }
-google.load('visualization', '1', {packages:['corechart', 'bar'], callback: drawChartB});
-
-
-$("a[href='#1']").on('shown.bs.tab', function (e) {
-    google.load('visualization', '1', {
-        packages: ['timeline'],
-        callback: drawChart
-    });
-});
-
-$("a[href='#2']").on('shown.bs.tab', function (e) {
-    google.load('visualization', '1', {
-        packages: ['timeline'],
-        callback: drawChartA
-    });
-});
-
-$("a[href='#3']").on('shown.bs.tab', function (e) {
-    google.load('visualization', '1', {
-        packages: ['timeline'],
-        callback: drawChartC
-    });
-});
+google.load('visualization', '1', {packages:['geochart'], callback: drawChartC});
 
 // Tab Pane continue moving
-    var tabCarousel = setInterval(function() {
-      var tabs = $('.nav-tabs > li'),
-          active = tabs.filter('.active'),
-          next = active.next('li'),
-          toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
+/*var tabCarousel = setInterval(function() {
+  var tabs = $('.nav-tabs > li'),
+      active = tabs.filter('.active'),
+      next = active.next('li'),
+      toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
 
-      toClick.trigger('click');
-  }, 5000);
+  toClick.trigger('click');
+}, 5000);
+*/
