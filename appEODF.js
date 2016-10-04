@@ -38,17 +38,14 @@ function drawChartA() {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Game')
     data.addColumn('number', 'Game points');
-    //data.addColumn('number', 'Total');
 
     var lis = [];
     for (var i = 0; i < list.length; i++) {
-      //var value = ["Game 3", parseInt(list[i]), 85];
       var value = [list[i].name, parseInt(list[i].game)];
       lis.push(value);
     };
     data.addRows(lis);
     var options = {'title':'Game 3 Results'};
-    //var material = new google.charts.Bar(document.getElementById('ChartA'));
     var material =  new google.visualization.ColumnChart(document.getElementById('ChartA'));
     material.draw(data, options);
   });
@@ -76,7 +73,7 @@ function drawChartC() {
 google.load('visualization', '1', {packages:['geochart'], callback: drawChartC});
 
 // Tab Pane continue moving
-/*var tabCarousel = setInterval(function() {
+var tabCarousel = setInterval(function() {
   var tabs = $('.nav-tabs > li'),
       active = tabs.filter('.active'),
       next = active.next('li'),
@@ -84,4 +81,3 @@ google.load('visualization', '1', {packages:['geochart'], callback: drawChartC})
 
   toClick.trigger('click');
 }, 5000);
-*/
