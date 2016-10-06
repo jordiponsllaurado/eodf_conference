@@ -18,30 +18,37 @@ firebase.auth().signInWithEmailAndPassword("test@gmail.com", "adminadmin").catch
     // ...
 });
 
+function transformResultsData(snapshot) {
+    var data = snapshot.val();
+    var list = [];
+    for (var key in data) {
+        if (data.hasOwnProperty(key)) {
+            game_1 = data[key].game_1 ? data[key].game_1 : 0;
+            game_2 = data[key].game_2 ? data[key].game_2 : 0;
+            game_3 = data[key].game_3 ? data[key].game_3 : 0;
+            name = data[key].name ? data[key].name : '';
+            list.push({
+                    name: name,
+                    game1: game_1,
+                    game2: game_2,
+                    game3: game_3
+                })
+        }
+    }
+    return list;
+}
 
 function drawChartA() {
     var results = firebase.database().ref('results/');
     results.on('value', function(snapshot) {
-        var data = snapshot.val();
-        var list = [];
-        for (var key in data) {
-            if (data.hasOwnProperty(key)) {
-                game_3 = data[key].game_3 ? data[key].game_3 : '';
-                name = data[key].name ? data[key].name : '';
-                list.push({
-                        name: name,
-                        game: game_3,
-                    })
-            }
-        }
-
+        var list = transformResultsData(snapshot);
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Game')
         data.addColumn('number', 'Game points');
 
         var lis = [];
         for (var i = 0; i < list.length; i++) {
-            var value = [list[i].name, parseInt(list[i].game)];
+            var value = [list[i].name, parseInt(list[i].game3)];
             lis.push(value);
         };
         data.addRows(lis);
@@ -52,32 +59,34 @@ function drawChartA() {
 }
 google.load('visualization', '1', {packages:['corechart'], callback: drawChartA});
 
-/*function drawTable() {
-    var name = "Mark"
-    var surname = "Otto"
-    var lis = '';
-    lis = "<tr><th scope=`row`>1</th><td><img src=`" + name.toLowerCase() + "_" + surname.toLowerCase() + ".jpg` alt=`" + name + " " + surname +"` class=`img-circle img-responsive`></td><td>" + name + "</td><td>" + surname + "</td></tr>"
-    document.getElementById('tableValues').innerHTML = lis;
-}
-$("a[href='#B']").on('shown.bs.tab', function (e) {
-    drawTable
-});*/
-
 function drawTable() {
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Image');
-  data.addColumn('string', 'Name');
-  data.addColumn('string', 'Surname');
-  data.addRows([
-    ["<img src='guilty_cat.jpg' alt='Mark Otto' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:100px;height:100px;'/>", 'Mike',  'Doe'],
-    ["<img src='guilty_cat.jpg' alt='Mark Otto' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:100px;height:100px;'/>", 'Jim',   'Doe'],
-    ["<img src='guilty_cat.jpg' alt='Mark Otto' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:100px;height:100px;'/>", 'Alice', 'Doe'],
-    ["<img src='guilty_cat.jpg' alt='Mark Otto' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:100px;height:100px;'/>", 'Bob',   'Doe']
-  ]);
+    var results = firebase.database().ref('results/');
+    results.on('value', function(snapshot) {
+        var list = transformResultsData(snapshot);
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Image');
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Surname');
+        data.addColumn('number', 'Total points');
 
-  var table = new google.visualization.Table(document.getElementById('ChartB'));
+        var lis = [];
+        console.log(list)
+        for (var i = 0; i < list.length; i++) {
+            var totalPoints = parseInt(list[i].game1) + parseInt(list[i].game2) + parseInt(list[i].game3);
+            var value = ["<img src='guilty_cat.jpg' alt='Mark Otto' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:100px;height:100px;'/>", list[i].name, "Doe", totalPoints];
+            lis.push(value);
+        };
+        data.addRows(lis);
 
-  table.draw(data, {showRowNumber: true, allowHtml: true, width: '100%', height: '100%'});
+        // Create a view that shows top 20
+        var view = new google.visualization.DataView(data);
+        view.setRows(view.getFilteredRows([{column: 0, maxValue: 20}]));
+        view.setRows(data.getSortedRows({column: 3, desc: true}));
+
+
+        var table = new google.visualization.Table(document.getElementById('ChartB'));
+        table.draw(view, {showRowNumber: true, allowHtml: true, pageSize: 20, width: '100%', height: '100%'});
+  });
 }
 google.load('visualization', '1', {packages:['table'], callback: drawTable});
 
