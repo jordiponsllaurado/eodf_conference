@@ -27,8 +27,12 @@ function transformResultsData(snapshot) {
             game_2 = data[key].game_2 ? data[key].game_2 : 0;
             game_3 = data[key].game_3 ? data[key].game_3 : 0;
             name = data[key].name ? data[key].name : '';
+            surname = data[key].surname ? data[key].surname : '';
+            country = data[key].country ? data[key].country : '';
             list.push({
                     name: name,
+                    surname: surname,
+                    country: country,
                     game1: game_1,
                     game2: game_2,
                     game3: game_3
@@ -44,15 +48,26 @@ function drawChartA() {
         var list = transformResultsData(snapshot);
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Game')
-        data.addColumn('number', 'Game points');
+        data.addColumn('number', 'Played');
+        data.addColumn('number', 'Total players');
 
         var lis = [];
+        var game1 = 0;
+        var game2 = 0;
+        var game3 = 0;
         for (var i = 0; i < list.length; i++) {
-            var value = [list[i].name, parseInt(list[i].game3)];
-            lis.push(value);
+            if (list[i].game1 != 0) ++game1;
+            if (list[i].game2 != 0) ++game2;
+            if (list[i].game3 != 0) ++game3;
         };
+        var value1 = ["Game 1", game1, list.length];
+        lis.push(value1);
+        var value2 = ["Game 2", game2, list.length];
+        lis.push(value2);
+        var value3 = ["Game 3", game3, list.length];
+        lis.push(value3);
         data.addRows(lis);
-        var options = {'title':'Game 3 Results'};
+        var options = {'title':'Games'};
         var material =  new google.visualization.ColumnChart(document.getElementById('ChartA'));
         material.draw(data, options);
     });
@@ -64,16 +79,15 @@ function drawTable() {
     results.on('value', function(snapshot) {
         var list = transformResultsData(snapshot);
         var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Total points');
         data.addColumn('string', 'Image');
         data.addColumn('string', 'Name');
         data.addColumn('string', 'Surname');
-        data.addColumn('number', 'Total points');
 
         var lis = [];
-        console.log(list)
         for (var i = 0; i < list.length; i++) {
             var totalPoints = parseInt(list[i].game1) + parseInt(list[i].game2) + parseInt(list[i].game3);
-            var value = ["<img src='guilty_cat.jpg' alt='Mark Otto' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:100px;height:100px;'/>", list[i].name, "Doe", totalPoints];
+            var value = [totalPoints, "<img src='guilty_cat.jpg' alt='" + list[i].name + " " + list[i].surname + "' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:50px;height:50px;'/>", list[i].name, list[i].surname];
             lis.push(value);
         };
         data.addRows(lis);
@@ -81,7 +95,7 @@ function drawTable() {
         // Create a view that shows top 20
         var view = new google.visualization.DataView(data);
         view.setRows(view.getFilteredRows([{column: 0, maxValue: 20}]));
-        view.setRows(data.getSortedRows({column: 3, desc: true}));
+        view.setRows(data.getSortedRows({column: 0, desc: true}));
 
 
         var table = new google.visualization.Table(document.getElementById('ChartB'));
@@ -92,29 +106,40 @@ google.load('visualization', '1', {packages:['table'], callback: drawTable});
 
 
 function drawChartC() {
-    var data = google.visualization.arrayToDataTable([
-        ['Country', 'Popularity'],
-        ['Germany', 200],
-        ['United States', 300],
-        ['Brazil', 400],
-        ['Canada', 500],
-        ['France', 600],
-        ['RU', 700]
-    ]);
+    var results = firebase.database().ref('results/');
+    results.on('value', function(snapshot) {
+        var list = transformResultsData(snapshot);
 
-    var options = {};
+        var dictionary = {};
+        for (var i = 0; i < list.length; i++) {
+            var country = list[i].country;
+            if (country in dictionary) dictionary[country] = dictionary[country] + 1;
+            else dictionary[country] = dictionary[country] = 1;
+        };
+        var lis = [['Country', 'Attendees'],];
+        for (var i in dictionary) {
+            var country = [];
+            country.push(i);
+            country.push(dictionary[i]);
+            lis.push(country);
+        }
+        console.log(lis);
+        var data = google.visualization.arrayToDataTable(lis);
 
-    var chart = new google.visualization.GeoChart(document.getElementById('ChartC'));
+        var options = {width: '100%', height: '100%'};
 
-    chart.draw(data, options);
+        var chart = new google.visualization.GeoChart(document.getElementById('ChartC'));
+
+        chart.draw(data, options);
+    });
 }
 google.load('visualization', '1', {packages:['geochart'], callback: drawChartC});
 
 // Tab Pane continue moving
-/*var tabCarousel = setInterval(function() {
+var tabCarousel = setInterval(function() {
     var tabs = $('.nav-tabs > li'),
     active = tabs.filter('.active'),
     next = active.next('li'),
     toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
     toClick.trigger('click');
-}, 5000);*/
+}, 5000);
