@@ -1,0 +1,821 @@
+{
+  "-KTjW3T8PARzpRYGCqnP" : {
+    "country" : "HU",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Elvira",
+    "rfidID" : "0006828144",
+    "surname" : "Kalmar"
+  },
+  "-KTjW3WRPi2lxwRK_9DC" : {
+    "country" : "NL",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Jeroen",
+    "rfidID" : "0009553944",
+    "surname" : "van Bree"
+  },
+  "-KTjW3Z68v9J_rfeAELQ" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Mary",
+    "rfidID" : "0006369120",
+    "surname" : "Bronserud"
+  },
+  "-KTjW3c8b6_PGFql4tc8" : {
+    "country" : "IT",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Marco",
+    "rfidID" : "0009119162",
+    "surname" : "Calzolari"
+  },
+  "-KTjW3eyWpczOv6zFEoX" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Sophia",
+    "rfidID" : "0006688121",
+    "surname" : "Christie"
+  },
+  "-KTjW3hrj_bKIC3qrl_v" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Tom",
+    "rfidID" : "0000137465",
+    "surname" : "Francis"
+  },
+  "-KTjW3lI9Bi4OxE9bfo3" : {
+    "country" : "NL",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Jesper",
+    "rfidID" : "0006715912",
+    "surname" : "Hanssen"
+  },
+  "-KTjW3lsghogr" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Christian",
+    "rfidID" : "0006340517",
+    "surname" : "Rovira"
+  },
+  "-KTjW3o-kaFWV4VfugmY" : {
+    "country" : "NL",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Stephan",
+    "rfidID" : "0006842720",
+    "surname" : "Jackmuth"
+  },
+  "-KTjW3qcqe8rbcUBFTKF" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Mark",
+    "rfidID" : "0006842605",
+    "surname" : "LaScola"
+  },
+  "-KTjW3tEjhEyu2Msev0u" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Peter",
+    "rfidID" : "0006847088",
+    "surname" : "Turgoose"
+  },
+  "-KTjW3vweGYQT5-LmIlo" : {
+    "country" : "DE",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Eric",
+    "rfidID" : "0006727727",
+    "surname" : "Lynn"
+  },
+  "-KTjW3y_uswDwIVCAAQD" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Juan Carlos",
+    "rfidID" : "0006841134",
+    "surname" : "Siria"
+  },
+  "-KTjW40ForGInj17TBnV" : {
+    "country" : "NL",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Giles",
+    "rfidID" : "0006827419",
+    "surname" : "Slinger"
+  },
+  "-KTjW43OxpNCSZKYuSD0" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Simon",
+    "rfidID" : "0000180032",
+    "surname" : "Thane"
+  },
+  "-KTjW464TB5KV7wwnhug" : {
+    "country" : "NL",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Marc",
+    "rfidID" : "0006876277",
+    "surname" : "van Hooft"
+  },
+  "-KTjW48yuCEVRsjK2Pym" : {
+    "country" : "DK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Anne",
+    "rfidID" : "0006618751",
+    "surname" : "Weber Carlsen"
+  },
+  "-KTjW4BdBHG8RzQyXIxd" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Tanya",
+    "rfidID" : "0009137198",
+    "surname" : "Spencer"
+  },
+  "-KTjW4EFyb19hDnnzvaq" : {
+    "country" : "RO",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Geanina",
+    "rfidID" : "0005472971",
+    "surname" : "Ioan"
+  },
+  "-KTjW4GupCYaFSywLb8p" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Alison",
+    "rfidID" : "0009138847",
+    "surname" : "Ballantyne"
+  },
+  "-KTjW4JW-2pGSg7SkCkv" : {
+    "country" : "FR",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Susan",
+    "rfidID" : "0004184592",
+    "surname" : "Donnan"
+  },
+  "-KTjW4M9na1SFfWWFJBN" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Alastair",
+    "rfidID" : "0006690116",
+    "surname" : "Mitchell-Baker"
+  },
+  "-KTjW4Ow_8kvZ8mUqEXn" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Nick",
+    "rfidID" : "0006677056",
+    "surname" : "Richmond"
+  },
+  "-KTjW4RXv8kVZ4MFa8zQ" : {
+    "country" : "AT",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Manfred",
+    "rfidID" : "0006728119",
+    "surname" : "della Schiava"
+  },
+  "-KTjW4ULS6qP3HVZ_XNC" : {
+    "country" : "BR",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Guilherme",
+    "rfidID" : "0006842408",
+    "surname" : "Cavalieri"
+  },
+  "-KTjW4WuuHEQk_bMZVlp" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Maxine ",
+    "rfidID" : "0006842920",
+    "surname" : "Craig"
+  },
+  "-KTjW4ZdOD-bpzk9iWac" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Tristan",
+    "rfidID" : "0006846743",
+    "surname" : "Harris"
+  },
+  "-KTjW4bW7vfD4g27GHuh" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Marilyn",
+    "rfidID" : "0006870671",
+    "surname" : "Fogg"
+  },
+  "-KTjW4e6zuPzYHT3Nx-z" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Willian",
+    "rfidID" : "0006906891",
+    "surname" : "Zybach"
+  },
+  "-KTjW4gq7Zt7l9SjYEep" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Judith",
+    "rfidID" : "0000151750",
+    "surname" : "Okonkwo"
+  },
+  "-KTjW4jZxu6YuPM-W5gq" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Paul",
+    "rfidID" : "0003390220",
+    "surname" : "Tolchinsky"
+  },
+  "-KTjW4mJX5opufyVviLq" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Gary",
+    "rfidID" : "0003384451",
+    "surname" : "Frank"
+  },
+  "-KTjW4p-6L2jqBEKkMiT" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Charlotte",
+    "rfidID" : "0000208965",
+    "surname" : "Hanna"
+  },
+  "-KTjW4riIhvEXl5Dk43U" : {
+    "country" : "IT",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Simone",
+    "rfidID" : "0007778948",
+    "surname" : "Cicero"
+  },
+  "-KTjW4uQgVg-clDoVrO6" : {
+    "country" : "IT",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Claudia",
+    "rfidID" : "0003347831",
+    "surname" : "Pellicori"
+  },
+  "-KTjW4xCEyOrjxyaSpEb" : {
+    "country" : "IT",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Stelio",
+    "rfidID" : "0004190066",
+    "surname" : "Verzera"
+  },
+  "-KTjW5-3eO9Lr2cM60DA" : {
+    "country" : "FR",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Hajo",
+    "rfidID" : "0004184253",
+    "surname" : "Specht"
+  },
+  "-KTjW51uGmBXvlD22XuN" : {
+    "country" : "BE",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Rudy",
+    "rfidID" : "0006690480",
+    "surname" : "Demo"
+  },
+  "-KTjW557CLgPEdWs8iKX" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Lucia",
+    "rfidID" : "0006676740",
+    "surname" : "Ceja"
+  },
+  "-KTjW57nadueCEtK6mTz" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Roger",
+    "rfidID" : "0006727808",
+    "surname" : "Brufau"
+  },
+  "-KTjW5AOSPRbBdF_Qagf" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Pablo",
+    "rfidID" : "0006874882",
+    "surname" : "Herreros"
+  },
+  "-KTjW5DDsrlpPlMdldEb" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Estefanía (Pedrita Parker)",
+    "rfidID" : "0000183926",
+    "surname" : "Martinez"
+  },
+  "-KTjW5G4iBsJlVfslJ_K" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Paul",
+    "rfidID" : "0006896366",
+    "surname" : "Wayne"
+  },
+  "-KTjW5IfIQu_xbWENMFX" : {
+    "country" : "IT",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Eugenio ",
+    "rfidID" : "0006827807",
+    "surname" : "Battaglia"
+  },
+  "-KTjW5Mlc6pG5KHNUhTk" : {
+    "country" : "BE",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Benny",
+    "rfidID" : "0006834055",
+    "surname" : "Corvers"
+  },
+  "-KTjW5Q5uudouyWksXa-" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Julie",
+    "rfidID" : "0006883566",
+    "surname" : "Beedon"
+  },
+  "-KTjW5Sx09k84kQcvM4U" : {
+    "country" : "IT",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Chiara",
+    "rfidID" : "0002219132",
+    "surname" : "Agamennone"
+  },
+  "-KTjW5V_e2B0jzpF6OI0" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Ruth ",
+    "rfidID" : "0009590782",
+    "surname" : "Ortiz Gozalez"
+  },
+  "-KTjW5YDTXWONExZSp85" : {
+    "country" : "RO",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Laura",
+    "rfidID" : "0002194431",
+    "surname" : "Solomonescu"
+  },
+  "-KTjW5aTw3OjHYubSso0" : {
+    "country" : "RO",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Georgeta",
+    "rfidID" : "0000172737",
+    "surname" : "Dendrino"
+  },
+  "-KTjW5dFjuRSsECQj-5x" : {
+    "country" : "RO",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Lucian ",
+    "rfidID" : "0000144667",
+    "surname" : "Mihai"
+  },
+  "-KTjW5fy-p_iaE0Gn5rX" : {
+    "country" : "IN",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Shirish",
+    "rfidID" : "0006882631",
+    "surname" : "Joshi"
+  },
+  "-KTjW5jVoyZ9fL_Z3dPo" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Sam",
+    "rfidID" : "0006876619",
+    "surname" : "Bates"
+  },
+  "-KTjW5m1vy78_w0tx1-c" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Jackie",
+    "rfidID" : "0006901177",
+    "surname" : "Lynton"
+  },
+  "-KTjW5orvMbndLYi9TG1" : {
+    "country" : "S",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Gerard",
+    "rfidID" : "0002575566",
+    "surname" : "Chiva"
+  },
+  "-KTjW5sKb7wavqlB9-cM" : {
+    "country" : "D",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Lilian",
+    "rfidID" : "0004213955",
+    "surname" : "Leupold"
+  },
+  "-KTjW5vIWxEk79OQ6Gqj" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Naomi",
+    "rfidID" : "0004209483",
+    "surname" : "Stanford"
+  },
+  "-KTjW5y2br5qP8EPadPr" : {
+    "country" : "NL",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Ira ",
+    "rfidID" : "0004230376",
+    "surname" : "Morris"
+  },
+  "-KTjW6-lNVRDPS7xuFf0" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Deb",
+    "rfidID" : "0003354872",
+    "surname" : "Peluso"
+  },
+  "-KTjW62OHQgtJUlVJm5-" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Bryan",
+    "rfidID" : "0003364242",
+    "surname" : "Peluso"
+  },
+  "-KTjW65EcH6w7dD6r_E4" : {
+    "country" : "NL",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Jeroen",
+    "rfidID" : "0000202264",
+    "surname" : "van Mastrigt"
+  },
+  "-KTjW68aQRSR9IHXGPn2" : {
+    "country" : "S",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Miguel",
+    "rfidID" : "0000205902",
+    "surname" : "Munoz"
+  },
+  "-KTjW6BRY4KsB_lTU8Wb" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Debbie",
+    "rfidID" : "0007763195",
+    "surname" : "Odunsi"
+  },
+  "-KTjW6E7DFoX0FxiD8vY" : {
+    "country" : "RO",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Roxana",
+    "rfidID" : "0002591863",
+    "surname" : "Mocanu"
+  },
+  "-KTjW6Gtc3uWaiU3mbbo" : {
+    "country" : "S",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Jose",
+    "rfidID" : "0009569624",
+    "surname" : "Navarro"
+  },
+  "-KTjW6JepozZ5MU_Z479" : {
+    "country" : "D",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Reiner",
+    "rfidID" : "0000179665",
+    "surname" : "Baek"
+  },
+  "-KTjW6M_4GwFCGi99OLQ" : {
+    "country" : "D",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Alisa",
+    "rfidID" : "0000149153",
+    "surname" : "Stroebele"
+  },
+  "-KTjW6PCnMhotnd8QS3W" : {
+    "country" : "D",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Martin ",
+    "rfidID" : "0007798046",
+    "surname" : "Stroebele"
+  },
+  "-KTjW6RqhWMho8c8szU9" : {
+    "country" : "B",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Xavier",
+    "rfidID" : "0007785706",
+    "surname" : "Letizia"
+  },
+  "-KTjW6V-o-H7EhPusIpe" : {
+    "country" : "S",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Sophy",
+    "rfidID" : "0000163181",
+    "surname" : "Pern"
+  },
+  "-KTjW6Xm6bK3t0SVu_Am" : {
+    "country" : "S",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Saket",
+    "rfidID" : "0006853922",
+    "surname" : "Bivalkar"
+  },
+  "-KTjW6aikEJY7WdMa68t" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Val",
+    "rfidID" : "0006502668",
+    "surname" : "Sedounik"
+  },
+  "-KTjW6dQhsVbRw9U2pDH" : {
+    "country" : "US",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "David",
+    "rfidID" : "0009135721",
+    "surname" : "Hanna"
+  },
+  "-KTjW6gIxwSKTXbXQZ2s" : {
+    "country" : "D",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Thomas ",
+    "rfidID" : "0005467140",
+    "surname" : "Doering"
+  },
+  "-KTjW6j3sbC6dez_uP01" : {
+    "country" : "D",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Karen",
+    "rfidID" : "0009151113",
+    "surname" : "Schmidt"
+  },
+  "-KTjW6ljoRavEqO6UWyj" : {
+    "country" : "S",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Frederico",
+    "rfidID" : "0009147744",
+    "surname" : "Figueiredo"
+  },
+  "-KTjW6oVu8KGoL4iotrg" : {
+    "country" : "",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Hajni ",
+    "rfidID" : "0006409044",
+    "surname" : "Sagodi"
+  },
+  "-KTjW6r6AarrKANlE1SS" : {
+    "country" : "N",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Nicolay",
+    "rfidID" : "0000176283",
+    "surname" : "Worren"
+  },
+  "-KTjW6tl3fpvvZkPSybt" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Martin ",
+    "rfidID" : "0000170081",
+    "surname" : "Saville"
+  },
+  "-KTjW6waknE_K1FUSMis" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Keith ",
+    "rfidID" : "0006837215",
+    "surname" : "Pople"
+  },
+  "-KTjW6zYqC2s3cBezghV" : {
+    "country" : "",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Stuart",
+    "rfidID" : "0007767239",
+    "surname" : "Wigham"
+  },
+  "-KTjW71AXMAFmNHx8B-l" : {
+    "country" : "UK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Jordan",
+    "rfidID" : "0000211668",
+    "surname" : "Nurrish"
+  },
+  "-KTjW745uy1s-Uzv1PiT" : {
+    "country" : "DK",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Maja ",
+    "rfidID" : "0003382685",
+    "surname" : "Asaa"
+  },
+  "-KTjW78CDirP-y4pT_sP" : {
+    "country" : "A",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Hubert",
+    "rfidID" : "0003392886",
+    "surname" : "Dolleschall"
+  },
+  "-KTjW7BqQ4AIyQ-EOzJH" : {
+    "country" : "",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Irene",
+    "rfidID" : "0003348040",
+    "surname" : "Gil Ramon"
+  },
+  "-KTjW7Ej3GxAFkXyW6OE" : {
+    "country" : "",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Ana",
+    "rfidID" : "0003347463",
+    "surname" : "Cocean"
+  },
+  "-KTjW7HOPPWsXLHxedWg" : {
+    "country" : "",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Giuseppe",
+    "rfidID" : "0000185460",
+    "surname" : ""
+  },
+  "-KTjW7K7BsrHiShVrxRI" : {
+    "country" : "",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Emanuele",
+    "rfidID" : "0000197263",
+    "surname" : "Rapisarda"
+  },
+  "-KTjW7MoGrh1ETPLfDUc" : {
+    "country" : "",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Begoña ",
+    "rfidID" : "0006842390",
+    "surname" : "Monete"
+  },
+  "-KtjW3kgshourwjho" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Javier",
+    "rfidID" : "0000154396",
+    "surname" : "Serón"
+  },
+  "hjkrgaohsagohdf" : {
+    "country" : "ES",
+    "game_1" : 0,
+    "game_2" : 0,
+    "game_3" : 0,
+    "name" : "Marta",
+    "rfidID" : "0009149251",
+    "surname" : "Segura"
+  }
+}

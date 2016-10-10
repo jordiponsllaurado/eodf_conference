@@ -79,15 +79,15 @@ function drawTable() {
     results.on('value', function(snapshot) {
         var list = transformResultsData(snapshot);
         var data = new google.visualization.DataTable();
-        data.addColumn('number', 'Total points');
         data.addColumn('string', 'Image');
         data.addColumn('string', 'Name');
         data.addColumn('string', 'Surname');
+        data.addColumn('number', 'Total points');
 
         var lis = [];
         for (var i = 0; i < list.length; i++) {
             var totalPoints = parseInt(list[i].game1) + parseInt(list[i].game2) + parseInt(list[i].game3);
-            var value = [totalPoints, "<img src='guilty_cat.jpg' alt='" + list[i].name + " " + list[i].surname + "' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:50px;height:50px;'/>", list[i].name, list[i].surname];
+            var value = ["<img src='guilty_cat.jpg' alt='" + list[i].name + " " + list[i].surname + "' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:50px;height:50px;'/>", list[i].name, list[i].surname, totalPoints];
             lis.push(value);
         };
         data.addRows(lis);
@@ -95,11 +95,11 @@ function drawTable() {
         // Create a view that shows top 20
         var view = new google.visualization.DataView(data);
         view.setRows(view.getFilteredRows([{column: 0, maxValue: 20}]));
-        view.setRows(data.getSortedRows({column: 0, desc: true}));
+        view.setRows(data.getSortedRows({column: 3, desc: true}));
 
 
         var table = new google.visualization.Table(document.getElementById('ChartB'));
-        table.draw(view, {showRowNumber: true, allowHtml: true, pageSize: 20, width: '100%', height: '100%'});
+        table.draw(view, {showRowNumber: true, allowHtml: true, pageSize: 10, width: '100%', height: '100%'});
   });
 }
 google.load('visualization', '1', {packages:['table'], callback: drawTable});
@@ -123,7 +123,6 @@ function drawChartC() {
             country.push(dictionary[i]);
             lis.push(country);
         }
-        console.log(lis);
         var data = google.visualization.arrayToDataTable(lis);
 
         var options = {width: '100%', height: '100%'};
@@ -134,6 +133,17 @@ function drawChartC() {
     });
 }
 google.load('visualization', '1', {packages:['geochart'], callback: drawChartC});
+
+
+var title = setInterval(function() {
+    var text = '';
+    if (document.getElementById('title').innerHTML.indexOf('<h1>#EODF16</h1>') != -1) {
+        text = '<h1>#SparklingGames</h1>';
+    } else {
+        text = '<h1>#EODF16</h1>';
+    }
+    document.getElementById('title').innerHTML = text;
+}, 5000);
 
 // Tab Pane continue moving
 var tabCarousel = setInterval(function() {
