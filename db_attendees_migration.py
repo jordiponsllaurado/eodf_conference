@@ -28,7 +28,7 @@ try:
     reader = csv.reader(f)  # creates the reader object
     for row in reader:   # iterates the rows of the file in orders
         print(row)
-        data = {"name": row[0], "surname": row[1], "country": row[2], "rfidID": ""}
+        data = {"name": row[0], "surname": row[1], "country": row[2], "rfidID": "", "game_1": 0, "game_2": 0, "game_3": 0}
         db.child('results').push(data, user['idToken'])
 finally:
     f.close()      # closing
