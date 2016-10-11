@@ -148,11 +148,10 @@ var title = setInterval(function() {
 }, 5000);
 
 // Tab Pane continue moving
-/*var tabCarousel = setInterval(function() {
+var tabCarousel = setInterval(function() {
     var tabs = $('.nav-tabs > li'),
     active = tabs.filter('.active'),
     next = active.next('li'),
     toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
     toClick.trigger('click');
 }, 5000);
-*/
