@@ -2,10 +2,21 @@
 import array
 import pyrebase
 
-point_id_list = {'0000116942': {'game': 'game_01', 'points': 10}}
-reset_id = '123456'
+point_id_list = {
+    '0001734550': {'game': 'game_1', 'points': 5},
+    '0000785709': {'game': 'game_2', 'points': 5},
+    '0002855498': {'game': 'game_2', 'points': 10},
+    '0000793871': {'game': 'game_2', 'points': 15},
+    '0000116942': {'game': 'game_2', 'points': 20},
+    '0004096571': {'game': 'game_2', 'points': 25},
+    '0003964038': {'game': 'game_3', 'points': 10},
+    '0003936302': {'game': 'game_3', 'points': 15},
+    '0004141080': {'game': 'game_3', 'points': 25},
+    '0000259784': {'game': 'game_3', 'points': 100}
+}
 
-user = None
+reset_id_list = ['0004210288', '0000128012', '0004230940']
+
 config = {
     'apiKey': "AIzaSyDzVFtqSeQBld5UoPtTARd4htrf3WqZVj4",
     'authDomain': "eodf-5abd7.firebaseapp.com",
@@ -21,13 +32,22 @@ def setup_db():
     db = firebase.database()
     return db
 
-def write_db(db, user_id, data):
-    db.child('results').child(user_id).update(data, user['idToken'])
-    results = db.child('results').update(data, user['idToken'])
+def write_db(db_user_hash, points):
+    firebase = pyrebase.initialize_app(config)
+    auth = firebase.auth()
+    user = auth.sign_in_with_email_and_password('test@gmail.com', 'adminadmin')
+    db = firebase.database()
+    results = db.child('results').child(db_user_hash).update(points, user['idToken'])
 
-#TODO: How to exactly read the ammount of points?
-def get_user_db(db, id):
-    db.child('results').order_by_child("rfidID").equal_to(id).get(user['idToken']).val()
+def get_user_db(new_id_number):
+    firebase = pyrebase.initialize_app(config)
+    auth = firebase.auth()
+    user = auth.sign_in_with_email_and_password('test@gmail.com', 'adminadmin')
+    db = firebase.database()
+
+    child = db.child('results').order_by_child("rfidID").equal_to(new_id_number).get(user['idToken']).val()
+    print(child)
+    return child
 
 def create_db_data(game, points):
     data = {
@@ -52,19 +72,23 @@ while True:
         points_ammount = points_list['points']
 
         #Check id where points will be added
-        new_id_number = input('Enter your ID number:')
-        if new_id_number == reset_id:
+        new_id_number = str(input('Enter your ID number:'))
+        print(new_id_number)
+        if new_id_number in reset_id_list:
             print('reseting application...')
             break
 
         #Check if id points already exist in database
-        db = setup_db()
-        db_user = get_user_db(db, new_id_number)
+        #db = setup_db()
+        db_user = get_user_db(new_id_number)
         db_points = next (iter (dict(db_user).values()))[game]
 
         if (db_points == 0):
-            points = create_db_data(game, points_ammount)
+            points = {
+                game: points_ammount
+            }
             db_user_hash = list(db_user)[0]
-            write_db(db, db_user_hash, points)
+            print(points)
+            write_db(db_user_hash, points)
         else:
             print ('Points already scored for this activity')
