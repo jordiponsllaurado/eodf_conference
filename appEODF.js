@@ -29,13 +29,15 @@ function transformResultsData(snapshot) {
             name = data[key].name ? data[key].name : '';
             surname = data[key].surname ? data[key].surname : '';
             country = data[key].country ? data[key].country : '';
+            image = data[key].image ? data[key].image : '';
             list.push({
                     name: name,
                     surname: surname,
                     country: country,
                     game1: game_1,
                     game2: game_2,
-                    game3: game_3
+                    game3: game_3,
+                    image: image
                 })
         }
     }
@@ -87,7 +89,7 @@ function drawTable() {
         var lis = [];
         for (var i = 0; i < list.length; i++) {
             var totalPoints = parseInt(list[i].game1) + parseInt(list[i].game2) + parseInt(list[i].game3);
-            var value = ["<img src='guilty_cat.jpg' alt='" + list[i].name + " " + list[i].surname + "' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:50px;height:50px;'/>", list[i].name, list[i].surname, totalPoints];
+            var value = ["<img src='images/" + list[i].image + ".jpg' alt='images/default.jpg' " + list[i].surname + "' class='img-circle img-responsive' style='object-fit: cover; border-radius:50%;width:50px;height:50px;'/>", list[i].name, list[i].surname, totalPoints];
             lis.push(value);
         };
         data.addRows(lis);
@@ -146,10 +148,11 @@ var title = setInterval(function() {
 }, 5000);
 
 // Tab Pane continue moving
-var tabCarousel = setInterval(function() {
+/*var tabCarousel = setInterval(function() {
     var tabs = $('.nav-tabs > li'),
     active = tabs.filter('.active'),
     next = active.next('li'),
     toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
     toClick.trigger('click');
 }, 5000);
+*/
